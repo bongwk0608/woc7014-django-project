@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Reviews</title>
+</head>
+<body>
+
+<h1>🎮 Game Reviews</h1>
+
+{% for review in reviews %}
+    <div style="margin-bottom: 20px;">
+        <h2>{{ review.game.title }}</h2>
+        <p>{{ review.review }}</p>
+        <hr>
+    </div>
+{% empty %}
+    <p>No reviews yet.</p>
+{% endfor %}
+
+</body>
+</html>

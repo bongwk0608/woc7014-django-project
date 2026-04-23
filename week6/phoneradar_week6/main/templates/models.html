@@ -1,0 +1,10 @@
+<h1>{{ brand.name }} Models</h1>
+<ul>
+  {% for m in models %}
+    <li>
+      <a href="{% url 'model_detail' m.id %}">
+        {{ m.name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

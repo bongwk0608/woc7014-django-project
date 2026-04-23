@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Game Review Site</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<h1>{% block title %}My Game Review Site{% endblock %}</h1>
+
+<div class="top">
+    <img src="{% static 'images/banner.png' %}" alt="banner">
+</div>
+
+<div class="sidebar">
+    <h3>Side Navi Bar</h3>
+    {% block sidebar %}
+    <ul>
+        <li><a href="/">Game List</a></li>
+        <li><a href="#">Add Game</a></li>
+        <li><a href="#">Add Review</a></li>
+    </ul>
+    {% endblock %}
+</div>
+
+<div class="content">
+    <h3>{% block subtitle %}{% endblock %}</h3>
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

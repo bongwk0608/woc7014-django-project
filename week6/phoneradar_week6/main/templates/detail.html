@@ -1,0 +1,15 @@
+<h1>{{ model.name }}</h1>
+
+<h2>Reviews</h2>
+<ul>
+  {% for r in reviews %}
+    <li>{{ r.content }}</li>
+  {% endfor %}
+</ul>
+
+<h2>News Links</h2>
+<ul>
+  {% for n in newslinks %}
+    <li><a href="{{ n.url }}">{{ n.url }}</a></li>
+  {% endfor %}
+</ul>
